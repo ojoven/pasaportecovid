@@ -1,16 +1,291 @@
+@import "reset";
+
+/*
+|--------------------------------------------------------------------------
+| COLORS
+|--------------------------------------------------------------------------
+*/
+$themeColor: #635bff;
+$white: #fff;
+$grey: #999;
+$black: #323232;
+
+/*
+|--------------------------------------------------------------------------
+| BASE
+|--------------------------------------------------------------------------
+*/
 body {
 	background-color: #f6f6f6;
+	margin: 0;
+	padding: 0;
+	font-family: "Readex Pro", sans-serif;
 }
 
+/*
+|--------------------------------------------------------------------------
+| HEADER
+|--------------------------------------------------------------------------
+*/
+header {
+	position: relative;
+	z-index: 4;
+	padding: 10px 10px 10px 72px;
+	height: 72px;
+}
+
+h1,
+h2 {
+	margin: 0 auto;
+}
+
+.header {
+	&__title {
+		font-size: 22px;
+		color: $themeColor;
+		position: relative;
+		display: inline-block;
+
+		svg {
+			display: inline-block;
+			position: absolute;
+			left: -55px;
+			top: 4px;
+			width: 45px;
+			height: 45px;
+
+			> * {
+				stroke: $themeColor;
+			}
+		}
+	}
+
+	&__subtitle {
+		font-size: 14px;
+		font-weight: 300;
+		color: $grey;
+	}
+
+	&__upload {
+		position: absolute;
+		top: 18px;
+		right: 18px;
+
+		svg {
+			width: 30px;
+			height: 30px;
+			position: relative;
+			top: 2px;
+
+			> * {
+				stroke: $themeColor;
+				stroke-width: 26;
+			}
+		}
+	}
+}
+
+/*
+|--------------------------------------------------------------------------
+| COMPONENTS
+|--------------------------------------------------------------------------
+*/
 .passport {
+	position: fixed;
+	top: 72px;
+	background: #f0f0f0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	display: none;
+
+	&.is-active {
+		display: block;
+	}
+}
+
+.preview {
+	position: fixed;
+	top: 72px;
+	background: #f0f0f0;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 72px);
+	z-index: 2;
+
+	&__content {
+		position: absolute;
+		top: 30%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		text-align: center;
+	}
+}
+
+/*
+|--------------------------------------------------------------------------
+| BUTTONS
+|--------------------------------------------------------------------------
+*/
+.button {
+	&--main {
+		background: $themeColor;
+		color: $white;
+		padding: 10px 16px 14px;
+		border-radius: 6px;
+		text-decoration: none;
+		font-size: 24px;
+		font-weight: 800;
+		display: inline-block;
+
+		svg {
+			width: 20px;
+			height: 20px;
+			position: relative;
+			top: 2px;
+
+			> * {
+				stroke: $white;
+				stroke-width: 26;
+			}
+		}
+	}
+
+	&__disclaimer {
+		font-size: 14px;
+		margin-top: 10px;
+	}
+}
+
+/*
+|--------------------------------------------------------------------------
+| ICON
+|--------------------------------------------------------------------------
+*/
+.icon {
+	background: $themeColor;
+	display: inline-block;
+	padding: 20px;
+	color: $white;
+	font-weight: 900;
+	width: 210px;
+	height: 210px;
+	text-align: center;
+
+	&__hand {
+		font-size: 213%;
+		display: inline-block;
+
+		svg {
+			width: 122px;
+			height: 103px;
+
+			> * {
+				stroke: $white;
+			}
+		}
+	}
+
+	&__text {
+		font-size: 120%;
+	}
+}
+
+/*
+|--------------------------------------------------------------------------
+| INFO
+|--------------------------------------------------------------------------
+*/
+.info {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
+	z-index: 4;
 	display: none;
 
 	&.is-active {
 		display: block;
+	}
+
+	&__mask {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.4);
+	}
+
+	&__content {
+		position: fixed;
+		top: 20px;
+		left: 20px;
+		width: calc(100% - 40px);
+		height: calc(100% - 40px);
+		background: $white;
+		border-radius: 10px;
+		padding: 30px;
+	}
+
+	&__close {
+		font-size: 40px;
+		position: absolute;
+		top: -3px;
+		right: 15px;
+		text-decoration: none;
+		color: $black;
+		font-weight: 900;
+		display: inline-block;
+		padding: 5px;
+	}
+
+	&__footer {
+		position: absolute;
+		bottom: 20px;
+		right: 30px;
+		text-align: right;
+		font-size: 12px;
+
+		a {
+			text-decoration: none;
+			color: $black;
+			position: relative;
+			display: inline-block;
+
+			&::after {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				background-color: $black;
+				bottom: -2px;
+				left: 0;
+			}
+		}
+	}
+}
+
+.toInfo {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background: $themeColor;
+	border-radius: 50%;
+	z-index: 3;
+	width: 50px;
+	height: 50px;
+	padding: 5px;
+
+	svg {
+		width: 40px;
+		height: 40px;
+		fill: $white;
+
+		> * {
+			stroke: $white;
+		}
 	}
 }

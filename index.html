@@ -6,21 +6,150 @@
 	<title>Pasaporte Covid App - Tu pasaporte a un click</title>
 	<meta name="description" content="PasaporteCovid.app te ayuda a tener tu pasaporte en la pantalla de tu móvil.">
 	<meta name="viewport" content="width=device-width">
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@ojoven" />
+	<meta name="twitter:title" content="pasaportecovid.app" />
+	<meta name="twitter:description" content="tu pasaporte siempre a mano" />
+	<meta name="twitter:image" content="https://pasaportecovid.app/img/share_v2.png?v=1" />
+
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="pasaportecovid.app" />
+	<meta property="og:description" content="tu pasaporte siempre a mano" />
+	<meta property="og:image" content="/img/share.png" />
+	<meta property="og:image:width" content="1012" />
+	<meta property="og:image:height" content="506" />
+	<meta property="og:url" content="https://pasaportecovid.app" />
+	<meta property="og:site_name" content="pasaportecovid.app" />
+
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#635bff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#635bff">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-	<h1>Pasaporte COVID</h1>
-	<p class="description">
-		Sube el PDF con tu pasaporte COVID
-	</p>
+	<header>
+		<h1 class="header__title">
+			<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#000000" viewBox="0 0 256 256">
+				<path d="M128,104V52a20,20,0,0,1,40,0v80" fill="none" stroke="#000000" stroke-linecap="round"
+					stroke-linejoin="round" stroke-width="16"></path>
+				<path d="M88,112V36a20,20,0,0,1,40,0v68" fill="none" stroke="#000000" stroke-linecap="round"
+					stroke-linejoin="round" stroke-width="16"></path>
+				<path d="M128,172a40,40,0,0,1,40-40V112a20,20,0,0,1,40,0v40a80,80,0,0,1-160,0V68a20,20,0,0,1,40,0v44"
+					fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
+				</path>
+			</svg>
 
-	<object id="passport" class="passport js-passport" type="application/pdf" height="100%" width="100%"></object>
+			pasaportecovid.app
+		</h1>
+		<h2 class="header__subtitle">tu pasaporte siempre a mano</h2>
 
-	<input type="file" id="uploadFile">
+		<!--
+		<div class="icon" hidden>
+			<span class="icon__hand"><svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#000000"
+					viewBox="0 0 256 256">
+					<path d="M128,104V52a20,20,0,0,1,40,0v80" fill="none" stroke="#000000" stroke-linecap="round"
+						stroke-linejoin="round" stroke-width="16"></path>
+					<path d="M88,112V36a20,20,0,0,1,40,0v68" fill="none" stroke="#000000" stroke-linecap="round"
+						stroke-linejoin="round" stroke-width="16"></path>
+					<path
+						d="M128,172a40,40,0,0,1,40-40V112a20,20,0,0,1,40,0v40a80,80,0,0,1-160,0V68a20,20,0,0,1,40,0v44"
+						fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
+					</path>
+				</svg></span>
+			<br><span class="icon__text">pasaporte<br><span class="icon__covid">covid.app</span></span>
+		</div>
+		-->
 
+		<label class="js-to-passport-header header__upload" for="uploadFile">
+			<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#000000" viewBox="0 0 256 256">
+				<polyline points="86 81.989 128 40 170 81.989" fill="none" stroke="#000000" stroke-linecap="round"
+					stroke-linejoin="round" stroke-width="16"></polyline>
+				<line x1="128" y1="152" x2="128" y2="40.02943" fill="none" stroke="#000000" stroke-linecap="round"
+					stroke-linejoin="round" stroke-width="16"></line>
+				<path d="M216,152v56a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V152" fill="none" stroke="#000000"
+					stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+			</svg>
+		</label>
+	</header>
+
+	<div class="preview">
+
+		<div class="preview__content">
+
+			<label class="button button--main" for="uploadFile">
+				Sube tu pasaporte
+				<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#000000" viewBox="0 0 256 256">
+					<polyline points="86 81.989 128 40 170 81.989" fill="none" stroke="#000000" stroke-linecap="round"
+						stroke-linejoin="round" stroke-width="16"></polyline>
+					<line x1="128" y1="152" x2="128" y2="40.02943" fill="none" stroke="#000000" stroke-linecap="round"
+						stroke-linejoin="round" stroke-width="16"></line>
+					<path d="M216,152v56a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V152" fill="none" stroke="#000000"
+						stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+				</svg>
+			</label>
+			<div class="button__disclaimer">
+				En formato PDF / PNG / JPG
+			</div>
+			<input type="file" id="uploadFile" hidden>
+		</div>
+	</div>
+
+	<div class="info js-info">
+
+		<div class="info__mask"></div>
+		<div class="info__content">
+
+			<a href="#" class="info__close js-to-close-info">×</a>
+			<h2 class="info__title">¿Qué es pasaportecovid.app?</h2>
+			<p>Esta sencilla aplicación web sirve para tener a mano el PDF que utilizamos como pasaporte COVID.</p>
+			<p>Una vez que subes el PDF, crea un acceso directo para que se genere un icono en la pantalla de inicio de
+				tu
+				móvil. De esa manera tendrás acceso rápido al pasaporte, sin tener que pensar dónde lo tienes guardado.
+			</p>
+
+			<div class="info__footer">Del creador de <a href="https://linguaso.com" target="_blank">Linguaso</a></div>
+		</div>
+
+
+	</div>
+
+	<a href="#" class="toInfo js-to-info">
+		<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#000000" viewBox="0 0 256 256">
+			<circle cx="128" cy="128" r="96" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"
+				stroke-width="16"></circle>
+			<circle cx="128" cy="180" r="12"></circle>
+			<path d="M127.9995,144.0045v-8a28,28,0,1,0-28-28" fill="none" stroke="#000000" stroke-linecap="round"
+				stroke-linejoin="round" stroke-width="16"></path>
+		</svg>
+	</a>
+
+	<canvas id="passport" class="passport js-passport"></canvas>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
 	<script src="js/app.min.js"></script>
+
+	<div class="js-log"></div>
 
 </body>
 
