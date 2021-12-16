@@ -90,7 +90,8 @@ h2 {
 | COMPONENTS
 |--------------------------------------------------------------------------
 */
-.passport {
+.passport,
+.passportImage {
 	position: fixed;
 	top: 72px;
 	background: #f0f0f0;
@@ -101,6 +102,19 @@ h2 {
 
 	&.is-active {
 		display: block;
+	}
+}
+
+.passportImage {
+	height: calc(100% - 72px);
+	background: $themeColor;
+
+	img {
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 90%;
 	}
 }
 
@@ -115,7 +129,7 @@ h2 {
 
 	&__content {
 		position: absolute;
-		top: 30%;
+		bottom: 100px;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		width: 100%;
@@ -194,10 +208,10 @@ h2 {
 
 /*
 |--------------------------------------------------------------------------
-| INFO
+| MODAL
 |--------------------------------------------------------------------------
 */
-.info {
+.modal {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -268,10 +282,14 @@ h2 {
 	}
 }
 
-.toInfo {
+/*
+|--------------------------------------------------------------------------
+| FOOTER OPTIONS
+|--------------------------------------------------------------------------
+*/
+.footerOption {
 	position: fixed;
 	bottom: 20px;
-	right: 20px;
 	background: $themeColor;
 	border-radius: 50%;
 	z-index: 3;
@@ -287,5 +305,53 @@ h2 {
 		> * {
 			stroke: $white;
 		}
+	}
+}
+
+.toInfo {
+	right: 20px;
+}
+
+.toInstall {
+	right: 80px;
+	display: none;
+
+	&.is-active {
+		display: block;
+	}
+
+	svg {
+		width: 32px;
+		height: 32px;
+		position: relative;
+		left: 4px;
+		top: 2px;
+	}
+}
+
+/*
+|--------------------------------------------------------------------------
+| INSTALL
+|--------------------------------------------------------------------------
+*/
+.installView {
+	display: none;
+
+	&.is-active {
+		display: block;
+	}
+
+	&__safariIcon1 {
+		width: 20px;
+		height: 20px;
+	}
+
+	&__safariIcon2 {
+		position: fixed;
+		left: 48%;
+		transform: translateX(-50%);
+		bottom: 0;
+		width: 90px;
+		height: 90px;
 	}
 }

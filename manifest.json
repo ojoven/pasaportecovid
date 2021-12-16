@@ -1,4 +1,9 @@
 {
+	"short_name": "pasaportecovid.app",
+	"start_url": "/index.html?utm_source=pwa",
+	"background_color": "#635bff",
+	"theme_color": "#635bff",
+	"display": "standalone",
 	"name": "Pasaporte Covid",
 	"icons": [
 		{

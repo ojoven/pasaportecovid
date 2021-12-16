@@ -111,30 +111,82 @@
 			<div class="button__disclaimer">
 				En formato PDF / PNG / JPG
 			</div>
-			<input type="file" id="uploadFile" hidden>
+			<input type="file" id="uploadFile" accept=".pdf,.png,.jpg,.jpeg" hidden>
 		</div>
 	</div>
 
-	<div class="info js-info">
+	<div class="info modal js-info js-modal" data-modal="info">
 
-		<div class="info__mask"></div>
-		<div class="info__content">
+		<div class="modal__mask"></div>
+		<div class="modal__content">
 
-			<a href="#" class="info__close js-to-close-info">×</a>
-			<h2 class="info__title">¿Qué es pasaportecovid.app?</h2>
+			<a href="#" class="modal__close js-to-close-modal">×</a>
+			<h2 class="modal__title">¿Qué es pasaportecovid.app?</h2>
 			<p>Esta sencilla aplicación web sirve para tener a mano el PDF que utilizamos como pasaporte COVID.</p>
 			<p>Una vez que subes el PDF, crea un acceso directo para que se genere un icono en la pantalla de inicio de
 				tu
 				móvil. De esa manera tendrás acceso rápido al pasaporte, sin tener que pensar dónde lo tienes guardado.
 			</p>
+			<p>Por cierto, el pasaporte nunca se sube a nuestro servidor, se almacena única y exclusivamente en tu
+				dispositivo.</p>
 
-			<div class="info__footer">Del creador de <a href="https://linguaso.com" target="_blank">Linguaso</a></div>
+			<div class="modal__footer">Del creador de <a href="https://linguaso.com" target="_blank">Linguaso</a></div>
 		</div>
-
 
 	</div>
 
-	<a href="#" class="toInfo js-to-info">
+	<div class="info modal js-install js-modal" data-modal="install">
+
+		<div class="modal__mask"></div>
+		<div class="modal__content">
+
+			<a href="#" class="modal__close js-to-close-modal">×</a>
+			<h2 class="modal__title">Instala un acceso directo en tu dispositivo</h2>
+
+			<div class="installView js-install-view" data-view="ios-chrome">
+				<p>
+					Instalar un acceso directo no está permitido en iOS Chrome.
+				</p>
+				<p>Por favor visítanos con Safari e instala
+					el acceso directo desde ahí.</p>
+			</div>
+
+			<div class="installView js-install-view" data-view="default">
+				<p>
+					No detectamos correctamente cuál es tu navegador o estás en modo incógnito, pero deberías poder
+					instalar el acceso directo
+					yendo a las opciones de este.
+				</p>
+				<p>Si no, siempre sabes que tienes tu pasaporte en pasaportecovid.app</p>
+			</div>
+
+			<div class="installView js-install-view" data-view="ios-chrome">
+				<p>En 2 clicks lo tienes hecho</p>
+				Haz click en <svg class="installView__safariIcon1" id="svg" xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="522.3021582733813"
+					viewBox="0, 0, 400,522.3021582733813">
+					<g id="svgg">
+						<path id="path0"
+							d="M149.654 56.820 L 100.044 106.447 110.789 117.264 L 121.535 128.082 152.854 96.787 L 184.173 65.492 184.173 201.811 L 184.173 338.129 200.000 338.129 L 215.827 338.129 215.827 201.811 L 215.827 65.492 247.146 96.787 L 278.465 128.082 289.211 117.264 L 299.956 106.447 250.346 56.820 C 223.060 29.526,200.404 7.194,200.000 7.194 C 199.596 7.194,176.940 29.526,149.654 56.820 M40.405 161.998 C 25.835 165.915,15.201 175.529,10.480 189.051 C 6.373 200.817,6.535 476.282,10.656 486.966 C 14.135 495.987,22.998 505.642,32.316 510.560 L 39.568 514.388 200.000 514.388 L 360.432 514.388 367.684 510.560 C 377.002 505.642,385.865 495.987,389.344 486.966 C 391.974 480.146,392.086 474.074,392.086 338.129 C 392.086 175.680,392.969 187.026,379.264 173.321 C 366.568 160.625,366.435 160.602,300.360 160.044 L 243.165 159.560 243.165 175.464 L 243.165 191.367 297.952 191.367 L 352.739 191.367 356.945 195.573 L 361.151 199.779 361.151 336.651 C 361.151 489.224,361.727 480.520,351.437 483.378 C 343.974 485.451,56.026 485.451,48.563 483.378 C 38.273 480.520,38.849 489.224,38.849 336.651 L 38.849 199.779 43.055 195.573 L 47.261 191.367 102.048 191.367 L 156.835 191.367 156.835 175.540 L 156.835 159.712 102.518 159.807 C 59.714 159.882,46.549 160.346,40.405 161.998 "
+							stroke="none" fill="#000000" fill-rule="evenodd"></path>
+					</g>
+				</svg> donde indica la flecha de abajo y luego en "Añadir a Pantalla de Inicio"
+				<svg class="installView__safariIcon2" xmlns="http://www.w3.org/2000/svg" width="192" height="192"
+					fill="#000000" viewBox="0 0 256 256">
+					<rect width="256" height="256" fill="none"></rect>
+					<polyline points="104 176 152 224 200 176" fill="none" stroke="#000000" stroke-linecap="round"
+						stroke-linejoin="round" stroke-width="16"></polyline>
+					<path d="M56,32a96,96,0,0,1,96,96v96" fill="none" stroke="#000000" stroke-linecap="round"
+						stroke-linejoin="round" stroke-width="16"></path>
+				</svg>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<a href="#" class="toInfo footerOption js-to-modal" data-modal="info">
 		<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#000000" viewBox="0 0 256 256">
 			<circle cx="128" cy="128" r="96" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"
 				stroke-width="16"></circle>
@@ -144,12 +196,33 @@
 		</svg>
 	</a>
 
-	<canvas id="passport" class="passport js-passport"></canvas>
+	<a href="#" class="toInstall footerOption js-to-install js-to-modal" data-modal="install">
+
+		<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#000000" viewBox="0 0 256 256">
+			<polyline points="86 110.011 128 152 170 110.011" fill="none" stroke="#000000" stroke-linecap="round"
+				stroke-linejoin="round" stroke-width="16"></polyline>
+			<line x1="128" y1="40" x2="128" y2="151.97057" fill="none" stroke="#000000" stroke-linecap="round"
+				stroke-linejoin="round" stroke-width="16"></line>
+			<path d="M216,152v56a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V152" fill="none" stroke="#000000" stroke-linecap="round"
+				stroke-linejoin="round" stroke-width="16"></path>
+		</svg>
+	</a>
+
+	<canvas id="passport" class="passport js-passport js-passport-pdf"></canvas>
+	<div class="passportImage js-passport-image-container">
+		<img src="data:," class="passport js-passport js-passport-image" alt="" />
+	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
 	<script src="js/app.min.js"></script>
 
-	<div class="js-log"></div>
+	<script>
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', function () {
+				navigator.serviceWorker.register('/service-worker.js');
+			});
+		}
+	</script>
 
 </body>
 
