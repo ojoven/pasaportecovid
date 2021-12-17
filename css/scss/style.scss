@@ -129,12 +129,20 @@ h2 {
 	z-index: 2;
 
 	&__content {
+	}
+
+	&__button {
 		position: absolute;
 		bottom: 100px;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		width: 100%;
 		text-align: center;
+	}
+
+	&__information {
+		text-align: left;
+		padding: 30px;
 	}
 }
 
@@ -170,6 +178,29 @@ h2 {
 	&__disclaimer {
 		font-size: 14px;
 		margin-top: 10px;
+
+		.smaller {
+			display: inline-block;
+			font-size: 12px;
+			margin-top: 5px;
+		}
+	}
+
+	&__disclaimerLink {
+		text-decoration: none;
+		color: $black;
+		position: relative;
+		display: inline-block;
+
+		&::after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: $black;
+			bottom: -2px;
+			left: 0;
+		}
 	}
 }
 
@@ -232,6 +263,10 @@ h2 {
 		width: 100%;
 		height: 100%;
 		background: rgba(0, 0, 0, 0.4);
+	}
+
+	&__title {
+		padding-right: 20px;
 	}
 
 	&__content {
@@ -327,6 +362,30 @@ h2 {
 		position: relative;
 		left: 4px;
 		top: 2px;
+	}
+}
+
+.toTerms {
+	font-weight: 800;
+	position: fixed;
+	bottom: 20px;
+	left: 20px;
+	z-index: 3;
+	padding: 5px;
+	color: $grey;
+	font-size: 12px;
+	text-decoration: none;
+	background: #f0f0f0;
+	border-radius: 6px 6px 0 0;
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		background-color: $grey;
+		bottom: -2px;
+		left: 0;
 	}
 }
 

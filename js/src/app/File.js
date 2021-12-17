@@ -15,7 +15,6 @@ var File = {
 			reader.onload = function (e) {
 				Storage.set('pasaporte', e.target.result);
 				Passport.showPassport();
-				PWA.showInstallable();
 			}
 		});
 	}

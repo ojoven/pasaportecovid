@@ -3,15 +3,16 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Pasaporte Covid App - Tu pasaporte a un click</title>
-	<meta name="description" content="PasaporteCovid.app te ayuda a tener tu pasaporte en la pantalla de tu móvil.">
+	<title>pasaportecovid.app - tu pasaporte siempre a mano</title>
+	<meta name="description"
+		content="pasaportecovid.app te ayuda a tener tu pasaporte en la pantalla de tu móvil. Sube el PDF o la captura de pantalla, crea un acceso directo y listo, tu pasaporte COVID a un click.">
 	<meta name="viewport" content="width=device-width">
 
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@ojoven" />
 	<meta name="twitter:title" content="pasaportecovid.app" />
 	<meta name="twitter:description" content="tu pasaporte siempre a mano" />
-	<meta name="twitter:image" content="https://pasaportecovid.app/img/share_v2.png?v=1" />
+	<meta name="twitter:image" content="https://pasaportecovid.app/img/share_v2.png?v=2" />
 
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="pasaportecovid.app" />
@@ -107,22 +108,56 @@
 
 		<div class="preview__content">
 
-			<label class="button button--main" for="uploadFile">
-				Sube tu pasaporte
-				<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#000000" viewBox="0 0 256 256">
-					<polyline points="86 81.989 128 40 170 81.989" fill="none" stroke="#000000" stroke-linecap="round"
-						stroke-linejoin="round" stroke-width="16"></polyline>
-					<line x1="128" y1="152" x2="128" y2="40.02943" fill="none" stroke="#000000" stroke-linecap="round"
-						stroke-linejoin="round" stroke-width="16"></line>
-					<path d="M216,152v56a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V152" fill="none" stroke="#000000"
-						stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
-				</svg>
-			</label>
-			<div class="button__disclaimer">
-				En formato PDF / PNG / JPG
+			<div class="preview__information">
+				<p>¿Te hablan de wallets pero tú sigues buscando tu pasaporte en la galería de fotos, entre ficheros, en
+					el correo...?</p>
+				<h3>Te ayudamos a tener el pasaporte a mano</h3>
+
 			</div>
-			<input type="file" id="uploadFile" accept=".pdf,.png,.jpg,.jpeg" hidden>
+
+			<div class="preview__button">
+
+				<label class="button button--main" for="uploadFile">
+					Sube tu pasaporte
+					<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#000000"
+						viewBox="0 0 256 256">
+						<polyline points="86 81.989 128 40 170 81.989" fill="none" stroke="#000000"
+							stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+						<line x1="128" y1="152" x2="128" y2="40.02943" fill="none" stroke="#000000"
+							stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+						<path d="M216,152v56a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V152" fill="none" stroke="#000000"
+							stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+					</svg>
+				</label>
+				<div class="button__disclaimer">
+					Formato PDF o captura de pantalla.<br>
+					<span class="smaller">No subimos nada a nuestro servidor<br><a href="#"
+							class="button__disclaimerLink js-to-modal" data-modal="terms">más información</a></span>
+				</div>
+				<input type="file" id="uploadFile" accept=".pdf,.png,.jpg,.jpeg" hidden>
+			</div>
 		</div>
+	</div>
+
+	<div class="info modal js-info js-modal" data-modal="terms">
+
+		<div class="modal__mask"></div>
+		<div class="modal__content">
+
+			<a href="#" class="modal__close js-to-close-modal">×</a>
+			<h2 class="modal__title">Seguridad</h2>
+			<p>Aunque utilizamos el texto "Subir Pasaporte" ningún archivo se sube a ningún servidor. Cualquier PDF o
+				imagen seleccionada se almacena en tu propio dispositivo, en una base de datos local llamada
+				localStorage.</p>
+			<p>De esta manera, el archivo nunca se sube a Internet, sólo se almacena en tu dispositivo.</p>
+			<!--
+			<p>Utilizamos las cookies de Google Analytics para saber el tráfico que recibe la plataforma.</p>
+			<p>No nos responsabilizamos de cualquier uso indebido que se haga de la plataforma o de si deja de funcionar
+				en cualquier momento. Intentaremos que esté siempre funcionando.</p>
+			<p>Si borras los datos de tu navegador se borrará también el archivo que has almacenado.</p>
+			-->
+		</div>
+
 	</div>
 
 	<div class="info modal js-info js-modal" data-modal="info">
@@ -133,14 +168,14 @@
 			<a href="#" class="modal__close js-to-close-modal">×</a>
 			<h2 class="modal__title">¿Qué es pasaportecovid.app?</h2>
 			<p>Esta sencilla aplicación web sirve para tener a mano el PDF que utilizamos como pasaporte COVID.</p>
-			<p>Una vez que subes el PDF, crea un acceso directo para que se genere un icono en la pantalla de inicio de
-				tu
-				móvil. De esa manera tendrás acceso rápido al pasaporte, sin tener que pensar dónde lo tienes guardado.
-			</p>
-			<p>Por cierto, el pasaporte nunca se sube a nuestro servidor, se almacena única y exclusivamente en tu
-				dispositivo.</p>
+			<p>Si ya lo tienes en tu wallet o has creado un acceso directo al pasaporte, ya está. No necesitas nuestra
+				ayuda.</p>
+			<p>Si tienes que dar varias vueltas para encontrar tu pasaporte, te lo ponemos más fácil.</p>
+			<p>Sube tu pasaporte en formato PDF o imagen y crea un acceso directo. Pum, tu pasaporte como si fuera una
+				app en tu móvil. Siempre a mano.</p>
 
-			<div class="modal__footer">Del creador de <a href="https://linguaso.com" target="_blank">Linguaso</a></div>
+			<div class="modal__footer">Hecho con ❤️ por el creador de <a href="https://linguaso.com"
+					target="_blank">Linguaso</a></div>
 		</div>
 
 	</div>
@@ -218,13 +253,17 @@
 		</svg>
 	</a>
 
+	<!---
+	<a href="#" class="toTerms js-to-modal" data-modal="terms">Términos</a>
+	-->
+
 	<canvas id="passport" class="passport js-passport js-passport-pdf"></canvas>
 	<div class="passportImage js-passport-image-container">
 		<img src="data:," class="passport js-passport js-passport-image" alt="" />
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
-	<script src="js/app.min.js?v=1"></script>
+	<script src="js/app.min.js?v=2"></script>
 
 	<script>
 		if ('serviceWorker' in navigator) {

@@ -4,6 +4,8 @@ var Passport = {
 		let data = Storage.get('pasaporte');
 		if (!data) return;
 
+		PWA.showInstallable();
+
 		var passport = Storage.get('pasaporte');
 		var type = passport.substring(5, 10) === 'image' ? 'image' : 'pdf';
 
