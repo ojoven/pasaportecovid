@@ -17,7 +17,7 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="pasaportecovid.app" />
 	<meta property="og:description" content="tu pasaporte siempre a mano" />
-	<meta property="og:image" content="/img/share.png" />
+	<meta property="og:image" content="https://pasaportecovid.app/img/share_v2.png?v=2" />
 	<meta property="og:image:width" content="1012" />
 	<meta property="og:image:height" content="506" />
 	<meta property="og:url" content="https://pasaportecovid.app" />
@@ -44,7 +44,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;600;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.css?v=1">
+	<link rel="stylesheet" href="css/style.css?v=3">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SRN790KXY2"></script>
@@ -59,6 +59,7 @@
 
 <body>
 
+	<!-- HEADER -->
 	<header>
 		<h1 class="header__title">
 			<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#000000" viewBox="0 0 256 256">
@@ -75,23 +76,6 @@
 		</h1>
 		<h2 class="header__subtitle">tu pasaporte siempre a mano</h2>
 
-		<!--
-		<div class="icon" hidden>
-			<span class="icon__hand"><svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#000000"
-					viewBox="0 0 256 256">
-					<path d="M128,104V52a20,20,0,0,1,40,0v80" fill="none" stroke="#000000" stroke-linecap="round"
-						stroke-linejoin="round" stroke-width="16"></path>
-					<path d="M88,112V36a20,20,0,0,1,40,0v68" fill="none" stroke="#000000" stroke-linecap="round"
-						stroke-linejoin="round" stroke-width="16"></path>
-					<path
-						d="M128,172a40,40,0,0,1,40-40V112a20,20,0,0,1,40,0v40a80,80,0,0,1-160,0V68a20,20,0,0,1,40,0v44"
-						fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
-					</path>
-				</svg></span>
-			<br><span class="icon__text">pasaporte<br><span class="icon__covid">covid.app</span></span>
-		</div>
-		-->
-
 		<label class="js-to-passport-header header__upload" for="uploadFile">
 			<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#000000" viewBox="0 0 256 256">
 				<polyline points="86 81.989 128 40 170 81.989" fill="none" stroke="#000000" stroke-linecap="round"
@@ -104,18 +88,19 @@
 		</label>
 	</header>
 
-	<div class="preview">
+	<!-- WELCOME -->
+	<div class="welcome">
 
-		<div class="preview__content">
+		<div class="welcome__content">
 
-			<div class="preview__information">
+			<div class="welcome__information">
 				<p>¿Te hablan de wallets pero tú sigues buscando tu pasaporte en la galería de fotos, entre ficheros, en
 					el correo...?</p>
-				<h3>Te ayudamos a tener el pasaporte a mano</h3>
+				<h3>Te ayudamos a tener el pasaporte COVID a mano</h3>
 
 			</div>
 
-			<div class="preview__button">
+			<div class="welcome__button">
 
 				<label class="button button--main" for="uploadFile">
 					Sube tu pasaporte
@@ -139,6 +124,30 @@
 		</div>
 	</div>
 
+	<!-- SUCCESS -->
+	<div class="success js-success">
+		<div class="success__mask"></div>
+
+		<div class="success__content">
+			<a href="#" class="modal__close js-to-close-success">×</a>
+			<h2 class="modal__title">¡Bien hecho!</h2>
+			<p>Ahora crea un acceso directo para que se cree un icono en la pantalla de inicio de tu móvil</p>
+
+			<a href="#" class="toInstall footerOption js-to-modal" data-modal="install">
+				<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#000000" viewBox="0 0 256 256">
+					<polyline points="86 110.011 128 152 170 110.011" fill="none" stroke="#000000"
+						stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+					<line x1="128" y1="40" x2="128" y2="151.97057" fill="none" stroke="#000000" stroke-linecap="round"
+						stroke-linejoin="round" stroke-width="16"></line>
+					<path d="M216,152v56a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V152" fill="none" stroke="#000000"
+						stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+				</svg>
+			</a>
+		</div>
+
+	</div>
+
+	<!-- MODALS -->
 	<div class="info modal js-info js-modal" data-modal="terms">
 
 		<div class="modal__mask"></div>
@@ -146,7 +155,7 @@
 
 			<a href="#" class="modal__close js-to-close-modal">×</a>
 			<h2 class="modal__title">Seguridad</h2>
-			<p>Aunque utilizamos el texto "Subir Pasaporte" ningún archivo se sube a ningún servidor. Cualquier PDF o
+			<p>Aunque utilizamos el texto "Sube tu pasaporte" ningún archivo se sube a ningún servidor. Cualquier PDF o
 				imagen seleccionada se almacena en tu propio dispositivo, en una base de datos local llamada
 				localStorage.</p>
 			<p>De esta manera, el archivo nunca se sube a Internet, sólo se almacena en tu dispositivo.</p>
@@ -156,6 +165,160 @@
 				en cualquier momento. Intentaremos que esté siempre funcionando.</p>
 			<p>Si borras los datos de tu navegador se borrará también el archivo que has almacenado.</p>
 			-->
+		</div>
+
+	</div>
+
+	<div class="info modal js-info js-modal" data-modal="share">
+
+		<div class="modal__mask"></div>
+		<div class="modal__content">
+
+			<a href="#" class="modal__close js-to-close-modal">×</a>
+			<h2 class="modal__title">Compártelo</h2>
+			<p>Si esta app te ha servido de ayuda, compártela. Con tu cuñado, tu grupo de amigas o tu pareja.</p>
+
+			<ul class="modal__services">
+
+				<!-- WHATSAPP -->
+				<li class="modal__service shareService -whatsapp">
+					<a href="https://api.whatsapp.com/send?text=🤚Si quieres tener a mano tu pasaporte COVID%0a⚡En esta web te lo ponen fácil%0a⬆️Sube tu PDF o captura y crea un acceso directo%0ahttps://pasaportecovid.app/"
+						class="shareService__link js-to-share" data-service="whatsapp">
+
+						<div class="shareService__icon">
+							<svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M15.9954 0C7.17484 0 0 7.17685 0 15.9999C0 19.499 1.12843 22.744 3.04667 25.378L1.05306 31.3225L7.20296 29.357C9.7324 31.0313 12.7509 32 16.0046 32C24.8252 32 32 24.8229 32 16.0001C32 7.17713 24.8252 0.000264486 16.0046 0.000264486H15.9954V0ZM11.5286 8.12722C11.2183 7.38418 10.9832 7.35605 10.5132 7.33693C10.3532 7.32764 10.1748 7.31836 9.97709 7.31836C9.36563 7.31836 8.72631 7.49702 8.3407 7.89203C7.87069 8.37173 6.70455 9.49092 6.70455 11.7861C6.70455 14.0813 8.37838 16.3012 8.60396 16.6118C8.8391 16.9218 11.8672 21.7002 16.5688 23.6477C20.2456 25.1714 21.3366 25.0302 22.1734 24.8515C23.3958 24.5882 24.9287 23.6848 25.3143 22.594C25.6999 21.5027 25.6999 20.5714 25.5868 20.3739C25.474 20.1764 25.1635 20.0639 24.6935 19.8284C24.2235 19.5932 21.9382 18.4644 21.5057 18.3139C21.0824 18.1541 20.6782 18.2107 20.3586 18.6622C19.9072 19.2924 19.4654 19.9322 19.1079 20.3177C18.8258 20.6187 18.3648 20.6564 17.9794 20.4963C17.4622 20.2802 16.0142 19.7719 14.2273 18.1823C12.8449 16.9502 11.9046 15.4172 11.6321 14.9563C11.3593 14.4862 11.6039 14.213 11.8199 13.9592C12.0551 13.6675 12.2807 13.4607 12.5158 13.1878C12.751 12.9152 12.8826 12.7739 13.0331 12.454C13.1931 12.1437 13.08 11.8238 12.9672 11.5886C12.8545 11.3534 11.9142 9.05821 11.5286 8.12722Z">
+								</path>
+							</svg>
+						</div>
+
+						<h3 class="shareService__title">Whatsapp</h3>
+
+						<div class="shareService__arrow">
+							<svg width="7" height="12" viewBox="0 0 7 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5" stroke-linecap="round"
+									stroke-linejoin="round"></path>
+							</svg>
+						</div>
+
+					</a>
+				</li>
+
+				<!-- TWITTER -->
+				<li class="modal__service shareService -twitter">
+					<a href="https://twitter.com/intent/tweet?url=https://pasaportecovid.app&amp;text=🤚Si quieres tener a mano tu pasaporte COVID%0a⚡En esta web te lo ponen fácil%0a⬆️Sube tu PDF o captura y crea un acceso directo%0a"
+						class="shareService__link js-to-share" data-service="twitter">
+
+						<div class="shareService__icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+								<path
+									d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z">
+								</path>
+							</svg>
+						</div>
+
+						<h3 class="shareService__title">Twitter</h3>
+
+						<div class="shareService__arrow">
+							<svg width="7" height="12" viewBox="0 0 7 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5" stroke-linecap="round"
+									stroke-linejoin="round"></path>
+							</svg>
+						</div>
+
+					</a>
+				</li>
+
+				<!-- FACEBOOK -->
+				<li class="modal__service shareService -facebook">
+					<a href="https://www.facebook.com/sharer/sharer.php?u=https://pasaportecovid.app"
+						class="shareService__link js-to-share" data-service="facebook">
+
+						<div class="shareService__icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+								<path
+									d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z">
+								</path>
+							</svg>
+						</div>
+
+						<h3 class="shareService__title">Facebook</h3>
+
+						<div class="shareService__arrow">
+							<svg width="7" height="12" viewBox="0 0 7 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5" stroke-linecap="round"
+									stroke-linejoin="round"></path>
+							</svg>
+						</div>
+
+					</a>
+				</li>
+
+				<!-- EMAIL -->
+				<li class="modal__service shareService -email">
+					<a href="mailto:?subject=tu pasaporte COVID a mano&amp;body=🤚Si quieres tener a mano tu pasaporte COVID%0a⚡En esta web te lo ponen fácil%0a⬆️Sube tu PDF o captura y crea un acceso directo%0ahttps://pasaportecovid.app"
+						class="shareService__link js-to-share" data-service="email">
+
+						<div class="shareService__icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+								<path
+									d="M12 .02c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.99 6.98l-6.99 5.666-6.991-5.666h13.981zm.01 10h-14v-8.505l7 5.673 7-5.672v8.504z">
+								</path>
+							</svg>
+						</div>
+
+						<h3 class="shareService__title">Email</h3>
+
+						<div class="shareService__arrow">
+							<svg width="7" height="12" viewBox="0 0 7 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5" stroke-linecap="round"
+									stroke-linejoin="round"></path>
+							</svg>
+						</div>
+
+					</a>
+				</li>
+
+				<!-- COPY LINK -->
+				<li class="modal__service shareService -link">
+					<a href="https://pasaportecovid.app" class="shareService__link js-share-copy-link">
+
+						<div class="shareService__icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+								viewBox="0 0 256 256">
+								<path
+									d="M122.34315,71.43146l19.799-19.799a44,44,0,1,1,62.22539,62.22539l-28.28427,28.28428a44,44,0,0,1-62.2254,0"
+									fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+								<path
+									d="M133.65685,184.56854l-19.799,19.799a44,44,0,1,1-62.22539-62.22539l28.28427-28.28428a44,44,0,0,1,62.2254,0"
+									fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+							</svg>
+						</div>
+
+						<h3 class="shareService__title">Copiar Enlace</h3>
+
+						<div class="shareService__arrow">
+							<svg width="7" height="12" viewBox="0 0 7 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5" stroke-linecap="round"
+									stroke-linejoin="round"></path>
+							</svg>
+						</div>
+
+					</a>
+				</li>
+
+			</ul>
+
+			<div class="shareService__notification js-share-copy-link-notification">
+				Enlace copiado a tu portapapeles
+			</div>
 		</div>
 
 	</div>
@@ -172,7 +335,8 @@
 				ayuda.</p>
 			<p>Si tienes que dar varias vueltas para encontrar tu pasaporte, te lo ponemos más fácil.</p>
 			<p>Sube tu pasaporte en formato PDF o imagen y crea un acceso directo. Pum, tu pasaporte como si fuera una
-				app en tu móvil. Siempre a mano.</p>
+				app en tu móvil.</p>
+			<p>Siempre a mano.</p>
 
 			<div class="modal__footer">Hecho con ❤️ por el creador de <a href="https://linguaso.com"
 					target="_blank">Linguaso</a></div>
@@ -205,7 +369,7 @@
 				<p>Si no, siempre sabes que tienes tu pasaporte en pasaportecovid.app</p>
 			</div>
 
-			<div class="installView js-install-view" data-view="ios-chrome">
+			<div class="installView js-install-view" data-view="ios-safari">
 				<p>En 2 clicks lo tienes hecho</p>
 				Haz click en <svg class="installView__safariIcon1" id="svg" xmlns="http://www.w3.org/2000/svg"
 					xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="522.3021582733813"
@@ -218,7 +382,6 @@
 				</svg> donde indica la flecha de abajo y luego en "Añadir a Pantalla de Inicio"
 				<svg class="installView__safariIcon2" xmlns="http://www.w3.org/2000/svg" width="192" height="192"
 					fill="#000000" viewBox="0 0 256 256">
-					<rect width="256" height="256" fill="none"></rect>
 					<polyline points="104 176 152 224 200 176" fill="none" stroke="#000000" stroke-linecap="round"
 						stroke-linejoin="round" stroke-width="16"></polyline>
 					<path d="M56,32a96,96,0,0,1,96,96v96" fill="none" stroke="#000000" stroke-linecap="round"
@@ -231,6 +394,7 @@
 
 	</div>
 
+	<!-- FOOTER -->
 	<a href="#" class="toInfo footerOption js-to-modal" data-modal="info">
 		<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#000000" viewBox="0 0 256 256">
 			<circle cx="128" cy="128" r="96" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"
@@ -253,17 +417,41 @@
 		</svg>
 	</a>
 
+	<a href="#" class="toInstall footerOption js-to-install js-to-modal" data-modal="install">
+
+		<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#000000" viewBox="0 0 256 256">
+			<polyline points="86 110.011 128 152 170 110.011" fill="none" stroke="#000000" stroke-linecap="round"
+				stroke-linejoin="round" stroke-width="16"></polyline>
+			<line x1="128" y1="40" x2="128" y2="151.97057" fill="none" stroke="#000000" stroke-linecap="round"
+				stroke-linejoin="round" stroke-width="16"></line>
+			<path d="M216,152v56a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V152" fill="none" stroke="#000000" stroke-linecap="round"
+				stroke-linejoin="round" stroke-width="16"></path>
+		</svg>
+	</a>
+
+	<a href="#" class="toShare footerOption js-to-install js-to-modal" data-modal="share">
+
+		<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#000000" viewBox="0 0 256 256">
+			<path
+				d="M210.25072,35.878,23.923,88.432a8,8,0,0,0-1.253,14.9295l85.61084,40.5525a8.00008,8.00008,0,0,1,3.80521,3.80521L152.63852,233.33a8,8,0,0,0,14.9295-1.253L220.122,45.74928A8,8,0,0,0,210.25072,35.878Z"
+				fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+			<line x1="110.86292" y1="145.13708" x2="156.11775" y2="99.88225" fill="none" stroke="#000000"
+				stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+		</svg>
+	</a>
+
 	<!---
 	<a href="#" class="toTerms js-to-modal" data-modal="terms">Términos</a>
 	-->
 
+	<!-- PASSPORT -->
 	<canvas id="passport" class="passport js-passport js-passport-pdf"></canvas>
 	<div class="passportImage js-passport-image-container">
 		<img src="data:," class="passport js-passport js-passport-image" alt="" />
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
-	<script src="js/app.min.js?v=2"></script>
+	<script src="js/app.min.js?v=3"></script>
 
 	<script>
 		if ('serviceWorker' in navigator) {

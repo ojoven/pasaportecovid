@@ -28,8 +28,10 @@ var PWA = {
 		var self = this;
 
 		if (this.isIOSSafari()) {
+			console.log('ios safari');
 			this.showIOSSafariMessage();
 		} else if (this.isIOSChrome()) {
+			console.log('ios chrome');
 			this.showIOSChromeMessage();
 		} else {
 			setTimeout(function () {

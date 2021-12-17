@@ -5,6 +5,7 @@ $(function () {
 var File = {
 
 	initializeFileUploading: function () {
+		let self = this;
 
 		$('#uploadFile').on('change', function (e) {
 			let file = e.target.files[0];
@@ -15,8 +16,11 @@ var File = {
 			reader.onload = function (e) {
 				Storage.set('pasaporte', e.target.result);
 				Passport.showPassport();
+				if (!PWA.isAlreadyInstalled()) {
+					Success.openModal();
+				}
 			}
 		});
-	}
+	},
 
 }
