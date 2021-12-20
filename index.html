@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<title>pasaportecovid.app - tu pasaporte siempre a mano</title>
 	<meta name="description"
-		content="pasaportecovid.app te ayuda a tener tu pasaporte en la pantalla de tu móvil. Sube el PDF o la captura de pantalla, crea un acceso directo y listo, tu pasaporte COVID a un click.">
+		content="pasaportecovid.app te ayuda a tener tu pasaporte en la pantalla de tu móvil. Añade el PDF o la captura de pantalla, crea un acceso directo y listo, tu pasaporte COVID a un click.">
 	<meta name="viewport" content="width=device-width">
 
 	<meta name="twitter:card" content="summary_large_image" />
@@ -103,7 +103,7 @@
 			<div class="welcome__button">
 
 				<label class="button button--main" for="uploadFile">
-					Sube tu pasaporte
+					Añade tu pasaporte
 					<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#000000"
 						viewBox="0 0 256 256">
 						<polyline points="86 81.989 128 40 170 81.989" fill="none" stroke="#000000"
@@ -116,8 +116,18 @@
 				</label>
 				<div class="button__disclaimer">
 					Formato PDF o captura de pantalla.<br>
-					<span class="smaller">No subimos nada a nuestro servidor<br><a href="#"
-							class="button__disclaimerLink js-to-modal" data-modal="terms">más información</a></span>
+					<span class="smaller">
+						<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#000000"
+							viewBox="0 0 256 256">
+							<rect width="256" height="256" fill="none"></rect>
+							<rect x="39.99414" y="88" width="176" height="128" rx="8" stroke-width="16" stroke="#000000"
+								stroke-linecap="round" stroke-linejoin="round" fill="none"></rect>
+							<path d="M91.99414,88V52a36,36,0,1,1,72,0V88" fill="none" stroke="#000000"
+								stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+						</svg>
+						No subimos tu pasaporte a Internet,<br>
+						<a href="#" class="button__disclaimerLink js-to-modal" data-modal="terms">más
+							información</a></span>
 				</div>
 				<input type="file" id="uploadFile" accept=".pdf,.png,.jpg,.jpeg" hidden>
 			</div>
@@ -154,17 +164,30 @@
 		<div class="modal__content">
 
 			<a href="#" class="modal__close js-to-close-modal">×</a>
-			<h2 class="modal__title">Seguridad</h2>
-			<p>Aunque utilizamos el texto "Sube tu pasaporte" ningún archivo se sube a ningún servidor. Cualquier PDF o
-				imagen seleccionada se almacena en tu propio dispositivo, en una base de datos local llamada
+			<h2 class="modal__title">Nos importa tu seguridad</h2>
+			<p>Es por eso que hemos decidido almacenar el archivo que añadas directamente en tu dispositivo, no en la
+				nube.
+				El archivo PDF o
+				imagen que selecciones se almacena en tu dispositivo, en el navegador (Chrome/Safari...) en una base de
+				datos local llamada
 				localStorage.</p>
 			<p>De esta manera, el archivo nunca se sube a Internet, sólo se almacena en tu dispositivo.</p>
-			<!--
-			<p>Utilizamos las cookies de Google Analytics para saber el tráfico que recibe la plataforma.</p>
-			<p>No nos responsabilizamos de cualquier uso indebido que se haga de la plataforma o de si deja de funcionar
-				en cualquier momento. Intentaremos que esté siempre funcionando.</p>
-			<p>Si borras los datos de tu navegador se borrará también el archivo que has almacenado.</p>
-			-->
+			<p>El código de la aplicación está <a class="external" href="https://github.com/ojoven/pasaportecovid"
+					target="_blank" rel="noopener noreferrer">
+					publicado en Github
+					<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#000000"
+						viewBox="0 0 256 256">
+						<rect width="256" height="256" fill="none"></rect>
+						<polyline points="216 100 215.992 40.008 156 40" fill="none" stroke="#000000"
+							stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+						<line x1="143.9714" y1="112.0286" x2="215.9714" y2="40.0286" fill="none" stroke="#000000"
+							stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+						<path d="M184,144v64a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V80a8,8,0,0,1,8-8h64" fill="none"
+							stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+					</svg>
+				</a>, un respositorio de código público
+				para proyectos
+				Open Source.</p>
 		</div>
 
 	</div>
@@ -184,7 +207,7 @@
 
 				<!-- WHATSAPP -->
 				<li class="modal__service shareService -whatsapp">
-					<a href="https://api.whatsapp.com/send?text=🤚Si quieres tener a mano tu pasaporte COVID%0a⚡En esta web te lo ponen fácil%0a⬆️Sube tu PDF o captura y crea un acceso directo%0ahttps://pasaportecovid.app/"
+					<a href="https://api.whatsapp.com/send?text=🤚Si quieres tener a mano tu pasaporte COVID%0a⚡En esta web te lo ponen fácil%0a⬆️Añade tu PDF o captura y crea un acceso directo%0ahttps://pasaportecovid.app/"
 						class="shareService__link js-to-share" data-service="whatsapp">
 
 						<div class="shareService__icon">
@@ -211,7 +234,7 @@
 
 				<!-- TWITTER -->
 				<li class="modal__service shareService -twitter">
-					<a href="https://twitter.com/intent/tweet?url=https://pasaportecovid.app&amp;text=🤚Si quieres tener a mano tu pasaporte COVID%0a⚡En esta web te lo ponen fácil%0a⬆️Sube tu PDF o captura y crea un acceso directo%0a"
+					<a href="https://twitter.com/intent/tweet?url=https://pasaportecovid.app&amp;text=🤚Si quieres tener a mano tu pasaporte COVID%0a⚡En esta web te lo ponen fácil%0a⬆️Añade tu PDF o captura y crea un acceso directo%0a"
 						class="shareService__link js-to-share" data-service="twitter">
 
 						<div class="shareService__icon">
@@ -263,7 +286,7 @@
 
 				<!-- EMAIL -->
 				<li class="modal__service shareService -email">
-					<a href="mailto:?subject=tu pasaporte COVID a mano&amp;body=🤚Si quieres tener a mano tu pasaporte COVID%0a⚡En esta web te lo ponen fácil%0a⬆️Sube tu PDF o captura y crea un acceso directo%0ahttps://pasaportecovid.app"
+					<a href="mailto:?subject=tu pasaporte COVID a mano&amp;body=🤚Si quieres tener a mano tu pasaporte COVID%0a⚡En esta web te lo ponen fácil%0a⬆️Añade tu PDF o captura y crea un acceso directo%0ahttps://pasaportecovid.app"
 						class="shareService__link js-to-share" data-service="email">
 
 						<div class="shareService__icon">
@@ -336,7 +359,7 @@
 			<p>Si ya lo tienes en tu wallet o has creado un acceso directo al pasaporte, ya está. No necesitas nuestra
 				ayuda.</p>
 			<p>Si tienes que dar varias vueltas para encontrar tu pasaporte, te lo ponemos más fácil.</p>
-			<p>Sube tu pasaporte en formato PDF o imagen y crea un acceso directo. Pum, tu pasaporte como si fuera una
+			<p>Añade tu pasaporte en formato PDF o imagen y crea un acceso directo. Pum, tu pasaporte como si fuera una
 				app en tu móvil.</p>
 			<p>Siempre a mano.</p>
 
