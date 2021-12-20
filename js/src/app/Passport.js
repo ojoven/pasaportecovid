@@ -64,6 +64,7 @@ var Passport = {
 
 		$('.js-passport').addClass('is-active');
 		$('.js-to-passport-header').addClass('is-active');
+		$('.js-welcome').hide();
 	}
 
 }

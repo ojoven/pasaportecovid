@@ -7,7 +7,7 @@
 */
 $themeColor: #635bff;
 $white: #fff;
-$grey: #999;
+$grey: #666;
 $black: #323232;
 
 /*
@@ -33,6 +33,7 @@ header {
 	padding: 10px 10px 10px 72px;
 	height: 72px;
 	background: $white;
+	overflow: hidden;
 }
 
 h1,
@@ -134,6 +135,7 @@ h2 {
 		transform: translate(-50%, -50%);
 		width: 100%;
 		text-align: center;
+		cursor: pointer;
 	}
 
 	&__information {
@@ -645,5 +647,38 @@ h2 {
 		> * {
 			stroke-width: 22;
 		}
+	}
+}
+
+// ==============================================
+// ACCESSIBILITY
+// ==============================================
+
+// Screen Reader Text: Not visible unless focused
+.srt {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute;
+	margin: 0;
+	padding: 0;
+
+	&:focus {
+		background-color: $themeColor;
+		border-radius: 3px;
+		box-shadow: 0 0 2px 2px $themeColor;
+		clip: auto;
+		color: $white;
+		display: block;
+		font-size: 14px;
+		font-weight: bold;
+		height: auto;
+		line-height: normal;
+		padding: 15px 23px 14px;
+		position: absolute;
+		left: 5px;
+		top: 5px;
+		text-decoration: none;
+		text-transform: none;
+		width: auto;
+		z-index: 10;
 	}
 }
