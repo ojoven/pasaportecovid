@@ -44,7 +44,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;600;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.css?v=3">
+	<link rel="stylesheet" href="css/style.css?v=4">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SRN790KXY2"></script>
@@ -177,6 +177,8 @@
 			<a href="#" class="modal__close js-to-close-modal">×</a>
 			<h2 class="modal__title">Compártelo</h2>
 			<p>Si esta app te ha servido de ayuda, compártela. Con tu cuñado, tu grupo de amigas o tu pareja.</p>
+			<p class="modal__disclaimer">*No se comparte en ningún caso el PDF o imagen subidas, sólo el enlace a la
+				app.</p>
 
 			<ul class="modal__services">
 
@@ -417,19 +419,7 @@
 		</svg>
 	</a>
 
-	<a href="#" class="toInstall footerOption js-to-install js-to-modal" data-modal="install">
-
-		<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#000000" viewBox="0 0 256 256">
-			<polyline points="86 110.011 128 152 170 110.011" fill="none" stroke="#000000" stroke-linecap="round"
-				stroke-linejoin="round" stroke-width="16"></polyline>
-			<line x1="128" y1="40" x2="128" y2="151.97057" fill="none" stroke="#000000" stroke-linecap="round"
-				stroke-linejoin="round" stroke-width="16"></line>
-			<path d="M216,152v56a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V152" fill="none" stroke="#000000" stroke-linecap="round"
-				stroke-linejoin="round" stroke-width="16"></path>
-		</svg>
-	</a>
-
-	<a href="#" class="toShare footerOption js-to-install js-to-modal" data-modal="share">
+	<a href="#" class="toShare footerOption js-to-modal" data-modal="share">
 
 		<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#000000" viewBox="0 0 256 256">
 			<path
@@ -451,7 +441,7 @@
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
-	<script src="js/app.min.js?v=3"></script>
+	<script src="js/app.min.js?v=4"></script>
 
 	<script>
 		if ('serviceWorker' in navigator) {
